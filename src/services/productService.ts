@@ -2,7 +2,7 @@ import api from './api';
 import { Product, CreateProductDto, ProductsResponse } from '../types/product';
 import { io, Socket } from 'socket.io-client';
 
-const baseURL = 'http://localhost:3000';  // Retirez /api/v1 de l'URL de base pour le socket
+const baseURL = 'http://localhost:3000';
 let socket: Socket;
 
 export const productService = {
@@ -24,7 +24,7 @@ export const productService = {
             console.error('Socket connection error:', error);
         });
 
-        return true; // Retournez une valeur sérialisable
+        return true;
     },
 
     getProducts: async (): Promise<ProductsResponse> => {
@@ -54,8 +54,8 @@ export const productService = {
     },
 
     updateProduct: async (id: string, data: Partial<Product>): Promise<ProductsResponse> => {
-        console.log('Updating product:', id, data); // Pour le debug
-        const response = await api.patch(`/produits/${id}`, data); // Changement de PUT à PATCH
+        console.log('Updating product:', id, data);
+        const response = await api.patch(`/produits/${id}`, data);
         console.log('Update response:', response.data);
         return response.data;
     },

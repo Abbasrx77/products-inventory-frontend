@@ -54,7 +54,6 @@ export const authSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            // Login cases
             .addCase(login.pending, (state) => {
                 state.loading = true;
                 state.error = null;
@@ -69,7 +68,6 @@ export const authSlice = createSlice({
                 state.loading = false;
                 state.error = action.error.message || 'Échec de la connexion';
             })
-            // Register cases
             .addCase(register.pending, (state) => {
                 state.loading = true;
                 state.error = null;

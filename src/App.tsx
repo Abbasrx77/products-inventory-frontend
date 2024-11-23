@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import { theme } from './theme';
 
-// Composants
+
 import { Navbar } from './components/layout/Navbar';
 import { ProtectedRoute } from './components/layout/ProtectedRoute';
 import LoginForm from './components/auth/LoginForm';
@@ -23,7 +23,7 @@ function App() {
                             display: 'flex',
                             flexDirection: 'column',
                             width: '100%',
-                            paddingTop: '64px', // Ajuster la hauteur en fonction de la taille de la barre de navigation
+                            paddingTop: '64px',
                         }}
                     >
                         <Navbar />
@@ -31,9 +31,9 @@ function App() {
                             sx={{
                                 display: 'flex',
                                 flexDirection: 'column',
-                                justifyContent: 'center', // Centre verticalement
-                                alignItems: 'center', // Centre horizontalement
-                                flex: 1, // Prend tout l'espace restant disponible
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                flex: 1,
                                 padding: '2rem',
                             }}
                         >

@@ -18,7 +18,7 @@ import {
 	stopSocketConnection,
 	deleteProduct,
 	fetchProducts,
-} from "../../features/products/productsSlice" // Assurez-vous d'importer fetchProducts
+} from "../../features/products/productsSlice"
 import type { AppDispatch, RootState } from "../../app/store"
 import { Product } from "../../types/product"
 
@@ -57,7 +57,6 @@ export const ProductList = () => {
 		setOpenDialog(false)
 	}
 
-	// Vérifiez que products est bien un tableau avant d'appeler filter
 	const filteredProducts = Array.isArray(products)
 		? products.filter(
 				product =>

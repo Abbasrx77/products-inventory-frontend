@@ -61,7 +61,6 @@ const authService = {
             localStorage.removeItem('user');
         } catch (error) {
             console.error('Erreur lors de la déconnexion:', error);
-            // On supprime quand même le token localement
             localStorage.removeItem('token');
             localStorage.removeItem('user');
         }
@@ -77,7 +76,6 @@ const authService = {
         }
     },
 
-    // Vérifie si l'utilisateur est authentifié
     isAuthenticated: (): boolean => {
         const token = localStorage.getItem('token');
         const user = localStorage.getItem('user');

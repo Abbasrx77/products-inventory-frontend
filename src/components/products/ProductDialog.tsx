@@ -142,7 +142,6 @@ export const ProductDialog = ({
 			...prev,
 			[name]: type === "checkbox" ? checked : value,
 		}))
-		// Clear error when field is modified
 		if (errors[name]) {
 			setErrors(prev => ({ ...prev, [name]: "" }))
 		}

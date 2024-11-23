@@ -53,7 +53,6 @@ const LoginForm = () => {
             navigate('/products');
         } catch (_error) {
             console.log(_error)
-            // Afficher un message générique lorsqu'une erreur se produit lors de la connexion
             setGenericError('Identifiants incorrects');
         }
     };
@@ -64,10 +63,10 @@ const LoginForm = () => {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'center', // Centrer verticalement
-                alignItems: 'center', // Centrer horizontalement
-                height: '100%', // Prend toute la hauteur disponible
-                textAlign: 'center', // S'assure que le texte est centré
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100%',
+                textAlign: 'center',
             }}
         >
             <Box sx={{ width: '100%', maxWidth: 400 }}>

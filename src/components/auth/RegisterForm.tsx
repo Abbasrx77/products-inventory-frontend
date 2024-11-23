@@ -38,7 +38,7 @@ const RegisterForm = () => {
 
         if (!formData.password) {
             errors.password = 'Le mot de passe est requis';
-        } else if (formData.password.length < 5) { // Changement 6 à 5
+        } else if (formData.password.length < 5) {
             errors.password = 'Le mot de passe doit contenir au moins 5 caractères';
         }
 
@@ -64,7 +64,6 @@ const RegisterForm = () => {
             ...prev,
             [name]: value
         }));
-        // Effacer l'erreur du champ modifié
         if (formErrors[name]) {
             setFormErrors(prev => ({
                 ...prev,
@@ -81,7 +80,6 @@ const RegisterForm = () => {
         }
 
         try {
-            // Utiliser _ pour indiquer que confirmPassword est intentionnellement non utilisé
             const { confirmPassword: _, ...registerData } = formData;
             console.log(_)
             await dispatch(register(registerData)).unwrap();
@@ -97,10 +95,10 @@ const RegisterForm = () => {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'center', // Centre verticalement
-                alignItems: 'center', // Centre horizontalement
-                height: '100%', // Prend toute la hauteur disponible
-                textAlign: 'center', // S'assure que le texte est centré
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100%',
+                textAlign: 'center',
             }}
         >
             <Box sx={{ width: '100%', maxWidth: 400 }}>
